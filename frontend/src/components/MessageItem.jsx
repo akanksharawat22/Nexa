@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { CopyIcon, CheckIcon, CheckCheckIcon, SmileIcon } from './Icons';
 
 const formatTimestamp = (isoString) => {
   if (!isoString) return '';
@@ -16,10 +17,15 @@ const avatarEmojiMap = {
 };
 
 const MessageItem = ({ message, currentUser }) => {
+  const [copied, setCopied] = useState(false);
+
+  // System notification messages
   if (message.isSystem) {
     return (
-      <div className="system-message">
-        <span>{message.content}</span>
+      <div className="system-message-row">
+        <span className="system-message-pill">
+          {message.content}
+        </span>
       </div>
     );
   }
@@ -27,18 +33,54 @@ const MessageItem = ({ message, currentUser }) => {
   const isSelf = currentUser && message.sender?.username === currentUser.username;
   const avatarSymbol = avatarEmojiMap[message.sender?.avatar] || '👤';
 
+  const handleCopy = () => {
+    if (message.content) {
+      navigator.clipboard?.writeText(message.content);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }
+  };
+
   return (
-    <div className={`message-item ${isSelf ? 'self' : 'other'}`}>
-      <div className="message-avatar">
-        {avatarSymbol}
-      </div>
-      <div className="message-content-wrapper">
-        <div className="message-meta">
-          <span className="sender-name">{message.sender?.username || 'Anonymous'}</span>
-          <span className="message-time">{formatTimestamp(message.timestamp)}</span>
+    <div className={`message-row ${isSelf ? 'outgoing' : 'incoming'}`}>
+      {!isSelf && (
+        <div className="message-avatar-container">
+          <span className="avatar-bubble" title={message.sender?.username}>
+            {avatarSymbol}
+          </span>
         </div>
+      )}
+
+      <div className="message-bubble-wrapper">
+        {!isSelf && (
+          <div className="message-header">
+            <span className="sender-username">{message.sender?.username || 'Anonymous'}</span>
+          </div>
+        )}
+
         <div className="message-bubble">
-          {message.content}
+          <p className="message-text">{message.content}</p>
+
+          <div className="message-status-bar">
+            <span className="message-time">{formatTimestamp(message.timestamp)}</span>
+            {isSelf && (
+              <span className="receipt-status" title="Delivered">
+                <CheckCheckIcon size={14} />
+              </span>
+            )}
+          </div>
+
+          {/* Quick Hover Action Bar */}
+          <div className="message-hover-actions">
+            <button
+              type="button"
+              className="hover-action-btn"
+              onClick={handleCopy}
+              title={copied ? "Copied!" : "Copy text"}
+            >
+              {copied ? <CheckIcon size={13} /> : <CopyIcon size={13} />}
+            </button>
+          </div>
         </div>
       </div>
     </div>

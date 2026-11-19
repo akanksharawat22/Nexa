@@ -15,36 +15,43 @@ const AuthModal = ({ onJoin }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!username.trim()) {
-      setError('Please enter a valid username');
+    const cleanName = username.trim();
+    if (!cleanName) {
+      setError('Please enter a display handle or username');
       return;
     }
-    if (username.trim().length < 2) {
+    if (cleanName.length < 2) {
       setError('Username must be at least 2 characters');
+      return;
+    }
+    if (cleanName.length > 20) {
+      setError('Username cannot exceed 20 characters');
       return;
     }
 
     onJoin({
-      username: username.trim(),
+      username: cleanName,
       avatar: selectedAvatar
     });
   };
 
   return (
-    <div className="modal-overlay">
-      <div className="modal-card">
-        <div className="modal-header">
-          <h2>Welcome to PulseChat</h2>
-          <p>Real-Time Distributed Messaging Platform</p>
+    <div className="auth-overlay">
+      <div className="auth-card">
+        <div className="auth-header">
+          <div className="auth-brand-logo">💬</div>
+          <h1 className="auth-title">Welcome to PulseChat</h1>
+          <p className="auth-subtitle">Real-Time Messaging & Distributed Platform</p>
         </div>
 
-        <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-          <div className="modal-input-group">
-            <label>Choose Your Handle</label>
+        <form onSubmit={handleSubmit} className="auth-form">
+          <div className="form-group">
+            <label htmlFor="auth-username-input">Choose Your Handle</label>
             <input
+              id="auth-username-input"
               type="text"
-              className="modal-input"
-              placeholder="e.g. alex_dev"
+              className="form-input auth-input"
+              placeholder="e.g. sarah_dev"
               value={username}
               onChange={(e) => {
                 setUsername(e.target.value);
@@ -52,30 +59,37 @@ const AuthModal = ({ onJoin }) => {
               }}
               autoFocus
               maxLength={20}
+              required
             />
-            {error && <span style={{ color: '#ef4444', fontSize: '0.8rem', marginTop: '4px' }}>{error}</span>}
+            {error && <span className="auth-error-msg">{error}</span>}
           </div>
 
-          <div className="modal-input-group">
+          <div className="form-group">
             <label>Select Avatar Persona</label>
-            <div className="avatar-picker">
+            <div className="auth-avatar-grid">
               {avatarPresets.map((preset) => (
                 <button
                   key={preset.id}
                   type="button"
-                  className={`avatar-option ${selectedAvatar === preset.id ? 'selected' : ''}`}
+                  className={`avatar-choice-btn ${selectedAvatar === preset.id ? 'active' : ''}`}
                   onClick={() => setSelectedAvatar(preset.id)}
                   title={preset.label}
+                  aria-label={`Select ${preset.label} avatar`}
                 >
-                  {preset.icon}
+                  <span className="avatar-choice-emoji">{preset.icon}</span>
+                  <span className="avatar-choice-label">{preset.label}</span>
                 </button>
               ))}
             </div>
           </div>
 
-          <button type="submit" className="primary-btn">
-            Enter Workspace 💬
+          <button type="submit" className="primary-btn auth-submit-btn">
+            Enter Workspace ⚡
           </button>
+
+          <p className="auth-footer-note">
+            💡 Connect instantly with WebSocket synchronization and channel rooms.
+          </p>
         </form>
       </div>
     </div>
