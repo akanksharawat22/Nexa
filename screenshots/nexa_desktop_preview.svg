@@ -1,0 +1,236 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="100%" height="100%" style="background:#0b0f19; font-family:'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <linearGradient id="nexaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="50%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <linearGradient id="bubbleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Top App Window Bar -->
+  <rect x="0" y="0" width="1200" height="40" fill="#0f172a" />
+  <circle cx="24" cy="20" r="6" fill="#ef4444" />
+  <circle cx="44" cy="20" r="6" fill="#f59e0b" />
+  <circle cx="64" cy="20" r="6" fill="#10b981" />
+  <text x="600" y="25" fill="#94a3b8" font-size="13" font-weight="600" text-anchor="middle">Nexa — Connect. Communicate. Collaborate.</text>
+  <line x1="0" y1="40" x2="1200" y2="40" stroke="rgba(255,255,255,0.08)" />
+
+  <!-- Column 1: Left Sidebar (width: 280) -->
+  <rect x="0" y="40" width="280" height="660" fill="#0f172a" />
+  <line x1="280" y1="40" x2="280" y2="700" stroke="rgba(255,255,255,0.08)" />
+
+  <!-- Brand Header -->
+  <g transform="translate(20, 56)">
+    <rect width="32" height="32" rx="8" fill="url(#nexaGrad)" />
+    <path d="M9 22.5V9.5h3.4l7.6 9.8V9.5h3v13h-3.4L12 12.7v9.8H9z" fill="#fff" />
+    <circle cx="23" cy="9.5" r="2.2" fill="#38bdf8" />
+    <text x="42" y="19" fill="#f8fafc" font-size="16" font-weight="700">Nexa</text>
+    <text x="42" y="30" fill="#94a3b8" font-size="10" font-weight="500">Connect. Communicate.</text>
+  </g>
+  <line x1="0" y1="102" x2="280" y2="102" stroke="rgba(255,255,255,0.08)" />
+
+  <!-- Nav Tabs -->
+  <rect x="16" y="114" width="248" height="34" rx="8" fill="rgba(0,0,0,0.2)" />
+  <rect x="18" y="116" width="78" height="30" rx="6" fill="rgba(99,102,241,0.2)" />
+  <text x="57" y="136" fill="#818cf8" font-size="12" font-weight="600" text-anchor="middle">Chats (4)</text>
+  <text x="140" y="136" fill="#94a3b8" font-size="12" font-weight="500" text-anchor="middle">Contacts (5)</text>
+  <text x="222" y="136" fill="#94a3b8" font-size="12" font-weight="500" text-anchor="middle">Settings</text>
+
+  <!-- Channels List -->
+  <text x="20" y="174" fill="#64748b" font-size="11" font-weight="700" letter-spacing="1">CHANNELS</text>
+  <!-- Channel Item Active -->
+  <rect x="12" y="184" width="256" height="36" rx="8" fill="rgba(99,102,241,0.18)" />
+  <text x="32" y="207" fill="#818cf8" font-size="14" font-weight="700">#</text>
+  <text x="48" y="206" fill="#f8fafc" font-size="13" font-weight="600">general</text>
+  <rect x="238" y="194" width="20" height="16" rx="8" fill="#6366f1" />
+  <text x="248" y="206" fill="#fff" font-size="10" font-weight="700" text-anchor="middle">3</text>
+
+  <!-- Other Channels -->
+  <text x="32" y="243" fill="#64748b" font-size="14">#</text>
+  <text x="48" y="242" fill="#94a3b8" font-size="13">tech-talk</text>
+
+  <text x="32" y="279" fill="#64748b" font-size="14">#</text>
+  <text x="48" y="278" fill="#94a3b8" font-size="13">design</text>
+
+  <text x="32" y="315" fill="#64748b" font-size="14">#</text>
+  <text x="48" y="314" fill="#94a3b8" font-size="13">random</text>
+
+  <!-- Direct Messages List -->
+  <text x="20" y="360" fill="#64748b" font-size="11" font-weight="700" letter-spacing="1">DIRECT MESSAGES</text>
+
+  <g transform="translate(16, 372)">
+    <circle cx="16" cy="16" r="14" fill="#1e293b" />
+    <text x="16" y="21" font-size="14" text-anchor="middle">🎨</text>
+    <circle cx="26" cy="24" r="4" fill="#10b981" stroke="#0f172a" stroke-width="1.5" />
+    <text x="38" y="16" fill="#f8fafc" font-size="13" font-weight="600">Maya Chen</text>
+    <text x="38" y="28" fill="#94a3b8" font-size="10">Product Designer</text>
+  </g>
+
+  <g transform="translate(16, 420)">
+    <circle cx="16" cy="16" r="14" fill="#1e293b" />
+    <text x="16" y="21" font-size="14" text-anchor="middle">🚀</text>
+    <circle cx="26" cy="24" r="4" fill="#10b981" stroke="#0f172a" stroke-width="1.5" />
+    <text x="38" y="16" fill="#f8fafc" font-size="13" font-weight="600">Liam Patel</text>
+    <text x="38" y="28" fill="#94a3b8" font-size="10">Cloud Protocols</text>
+  </g>
+
+  <g transform="translate(16, 468)">
+    <circle cx="16" cy="16" r="14" fill="#1e293b" />
+    <text x="16" y="21" font-size="14" text-anchor="middle">🔥</text>
+    <circle cx="26" cy="24" r="4" fill="#10b981" stroke="#0f172a" stroke-width="1.5" />
+    <text x="38" y="16" fill="#f8fafc" font-size="13" font-weight="600">Zara Vance</text>
+    <text x="38" y="28" fill="#94a3b8" font-size="10">AI Researcher</text>
+  </g>
+
+  <!-- User Profile Footer -->
+  <line x1="0" y1="630" x2="280" y2="630" stroke="rgba(255,255,255,0.08)" />
+  <g transform="translate(16, 642)">
+    <circle cx="20" cy="20" r="18" fill="url(#nexaGrad)" />
+    <text x="20" y="26" font-size="16" text-anchor="middle">⚡</text>
+    <circle cx="32" cy="30" r="4" fill="#10b981" stroke="#0f172a" stroke-width="2" />
+    <text x="46" y="18" fill="#f8fafc" font-size="13" font-weight="700">Alex Rivera</text>
+    <text x="46" y="32" fill="#818cf8" font-size="11">@alex_rivera • Online</text>
+  </g>
+
+  <!-- Column 2: Main Chat Window (width: 640) -->
+  <rect x="280" y="40" width="640" height="660" fill="#090d16" />
+  <line x1="920" y1="40" x2="920" y2="700" stroke="rgba(255,255,255,0.08)" />
+
+  <!-- Chat Header -->
+  <rect x="280" y="40" width="640" height="56" fill="#0f172a" />
+  <text x="304" y="74" fill="#818cf8" font-size="20" font-weight="700">#</text>
+  <text x="322" y="74" fill="#f8fafc" font-size="16" font-weight="700">general</text>
+  <text x="390" y="74" fill="#94a3b8" font-size="12">| General Discussion &amp; Community</text>
+  <line x1="280" y1="96" x2="920" y2="96" stroke="rgba(255,255,255,0.08)" />
+
+  <!-- Messages Scroll Area -->
+  <!-- Message 1: Incoming (Maya Chen) -->
+  <g transform="translate(304, 120)">
+    <circle cx="16" cy="16" r="16" fill="#1e293b" />
+    <text x="16" y="22" font-size="16" text-anchor="middle">🎨</text>
+    <text x="44" y="12" fill="#f8fafc" font-size="13" font-weight="600">Maya Chen</text>
+    <text x="126" y="12" fill="#64748b" font-size="11">10:42 AM</text>
+    
+    <!-- Bubble -->
+    <rect x="44" y="20" width="380" height="42" rx="12" fill="#1e293b" stroke="rgba(255,255,255,0.06)" />
+    <text x="58" y="46" fill="#f8fafc" font-size="13">Hey everyone! The dark mode theme and bouncy micro-animations feel super slick. 🎨</text>
+    
+    <!-- Reaction Badge -->
+    <g transform="translate(44, 68)">
+      <rect width="52" height="22" rx="11" fill="#1e293b" stroke="#6366f1" stroke-width="1.5" />
+      <text x="12" y="15" font-size="12">❤️ 2</text>
+      <rect x="58" width="52" height="22" rx="11" fill="#1e293b" stroke="rgba(255,255,255,0.08)" />
+      <text x="70" y="15" font-size="12">🔥 1</text>
+    </g>
+  </g>
+
+  <!-- Message 2: Incoming (Liam Patel) with attachment -->
+  <g transform="translate(304, 230)">
+    <circle cx="16" cy="16" r="16" fill="#1e293b" />
+    <text x="16" y="22" font-size="16" text-anchor="middle">🚀</text>
+    <text x="44" y="12" fill="#f8fafc" font-size="13" font-weight="600">Liam Patel</text>
+    <text x="124" y="12" fill="#64748b" font-size="11">10:45 AM</text>
+
+    <!-- File Attachment Card -->
+    <rect x="44" y="20" width="320" height="60" rx="12" fill="#1e293b" stroke="rgba(255,255,255,0.08)" />
+    <rect x="56" y="30" width="40" height="40" rx="8" fill="rgba(99,102,241,0.2)" />
+    <text x="76" y="55" font-size="18" text-anchor="middle">📄</text>
+    <text x="106" y="45" fill="#f8fafc" font-size="13" font-weight="600">nexa_architecture_v2.pdf</text>
+    <text x="106" y="60" fill="#94a3b8" font-size="11">2.4 MB • Document</text>
+  </g>
+
+  <!-- Message 3: Outgoing (Alex Rivera - Current User) with quoted reply -->
+  <g transform="translate(480, 330)">
+    <!-- Quoted Box inside bubble -->
+    <rect x="0" y="0" width="410" height="88" rx="14" fill="url(#bubbleGrad)" filter="url(#shadow)" />
+    <rect x="14" y="10" width="382" height="30" rx="6" fill="rgba(0,0,0,0.25)" />
+    <line x1="14" y1="10" x2="14" y2="40" stroke="#fff" stroke-width="3" />
+    <text x="24" y="24" fill="#e0e7ff" font-size="11" font-weight="700">@Maya Chen</text>
+    <text x="24" y="35" fill="rgba(255,255,255,0.8)" font-size="11">Hey everyone! The dark mode theme...</text>
+    <text x="14" y="62" fill="#ffffff" font-size="13" font-weight="500">Agreed! The WebSocket latency is sub-15ms and the</text>
+    <text x="14" y="78" fill="#ffffff" font-size="13" font-weight="500">audio chime sound effects feel super tactile! ⚡</text>
+    <text x="360" y="80" fill="rgba(255,255,255,0.8)" font-size="10">10:48 AM ✓✓</text>
+    <!-- Reaction badge -->
+    <g transform="translate(320, 94)">
+      <rect width="50" height="20" rx="10" fill="#1e293b" stroke="rgba(255,255,255,0.1)" />
+      <text x="10" y="14" font-size="11">🚀 3</text>
+    </g>
+  </g>
+
+  <!-- Typing Indicator -->
+  <g transform="translate(304, 570)">
+    <text x="0" y="18" fill="#94a3b8" font-size="12">Zara Vance is typing</text>
+    <circle cx="126" cy="14" r="3" fill="#818cf8" />
+    <circle cx="135" cy="11" r="3.5" fill="#818cf8" />
+    <circle cx="144" cy="14" r="3" fill="#818cf8" />
+  </g>
+
+  <!-- Composer Area -->
+  <rect x="296" y="600" width="608" height="52" rx="12" fill="#0f172a" stroke="rgba(255,255,255,0.08)" />
+  <circle cx="324" cy="626" r="14" fill="rgba(255,255,255,0.05)" />
+  <text x="324" y="631" font-size="14" text-anchor="middle">📎</text>
+  <circle cx="356" cy="626" r="14" fill="rgba(255,255,255,0.05)" />
+  <text x="356" y="631" font-size="14" text-anchor="middle">😊</text>
+  <text x="382" y="631" fill="#64748b" font-size="13">Message #general... (Press Enter to send)</text>
+  <rect x="856" y="610" width="36" height="32" rx="8" fill="url(#nexaGrad)" />
+  <text x="874" y="630" font-size="14" text-anchor="middle">➤</text>
+
+  <!-- Column 3: Right Details Panel (width: 280) -->
+  <rect x="920" y="40" width="280" height="660" fill="#0f172a" />
+  <text x="940" y="74" fill="#f8fafc" font-size="15" font-weight="700">Channel Details</text>
+  <line x1="920" y1="96" x2="1200" y2="96" stroke="rgba(255,255,255,0.08)" />
+
+  <text x="940" y="125" fill="#64748b" font-size="11" font-weight="700" letter-spacing="1">TOPIC</text>
+  <text x="940" y="145" fill="#e2e8f0" font-size="13">General Discussion &amp; Community</text>
+
+  <text x="940" y="195" fill="#64748b" font-size="11" font-weight="700" letter-spacing="1">ONLINE MEMBERS (4)</text>
+
+  <!-- Member items -->
+  <g transform="translate(940, 210)">
+    <circle cx="14" cy="14" r="14" fill="#1e293b" />
+    <text x="14" y="19" font-size="13" text-anchor="middle">⚡</text>
+    <text x="36" y="15" fill="#f8fafc" font-size="12" font-weight="600">Alex Rivera (You)</text>
+    <text x="36" y="27" fill="#818cf8" font-size="10">Active now</text>
+  </g>
+
+  <g transform="translate(940, 252)">
+    <circle cx="14" cy="14" r="14" fill="#1e293b" />
+    <text x="14" y="19" font-size="13" text-anchor="middle">🎨</text>
+    <text x="36" y="15" fill="#f8fafc" font-size="12" font-weight="600">Maya Chen</text>
+    <text x="36" y="27" fill="#10b981" font-size="10">Online</text>
+  </g>
+
+  <g transform="translate(940, 294)">
+    <circle cx="14" cy="14" r="14" fill="#1e293b" />
+    <text x="14" y="19" font-size="13" text-anchor="middle">🚀</text>
+    <text x="36" y="15" fill="#f8fafc" font-size="12" font-weight="600">Liam Patel</text>
+    <text x="36" y="27" fill="#10b981" font-size="10">Online</text>
+  </g>
+
+  <g transform="translate(940, 336)">
+    <circle cx="14" cy="14" r="14" fill="#1e293b" />
+    <text x="14" y="19" font-size="13" text-anchor="middle">🔥</text>
+    <text x="36" y="15" fill="#f8fafc" font-size="12" font-weight="600">Zara Vance</text>
+    <text x="36" y="27" fill="#10b981" font-size="10">Typing...</text>
+  </g>
+
+  <line x1="940" y1="380" x2="1180" y2="380" stroke="rgba(255,255,255,0.08)" />
+  <text x="940" y="410" fill="#64748b" font-size="11" font-weight="700" letter-spacing="1">SHARED MEDIA (3)</text>
+  
+  <rect x="940" y="425" width="230" height="40" rx="8" fill="rgba(255,255,255,0.04)" />
+  <text x="955" y="450" font-size="14">📄</text>
+  <text x="980" y="445" fill="#f8fafc" font-size="11" font-weight="600">nexa_architecture_v2.pdf</text>
+  <text x="980" y="457" fill="#64748b" font-size="10">2.4 MB</text>
+
+  <rect x="940" y="475" width="230" height="40" rx="8" fill="rgba(255,255,255,0.04)" />
+  <text x="955" y="500" font-size="14">🖼️</text>
+  <text x="980" y="495" fill="#f8fafc" font-size="11" font-weight="600">design_mockup_dark.png</text>
+  <text x="980" y="507" fill="#64748b" font-size="10">1.8 MB</text>
+</svg>

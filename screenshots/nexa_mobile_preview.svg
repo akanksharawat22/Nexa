@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 680" width="100%" height="100%" style="background:#090d16; font-family:'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <linearGradient id="nexaGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="50%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <linearGradient id="bubbleGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Mobile Status Bar -->
+  <rect x="0" y="0" width="380" height="32" fill="#0f172a" />
+  <text x="24" y="21" fill="#f8fafc" font-size="12" font-weight="600">9:41</text>
+  <text x="350" y="21" fill="#f8fafc" font-size="12" text-anchor="end">📶 🔋</text>
+
+  <!-- Mobile Chat Header -->
+  <rect x="0" y="32" width="380" height="54" fill="#0f172a" />
+  <line x1="0" y1="86" x2="380" y2="86" stroke="rgba(255,255,255,0.08)" />
+  <text x="18" y="65" fill="#818cf8" font-size="18">←</text>
+  <circle cx="56" cy="59" r="16" fill="#1e293b" />
+  <text x="56" y="65" font-size="16" text-anchor="middle">🎨</text>
+  <circle cx="68" cy="71" r="4" fill="#10b981" stroke="#0f172a" stroke-width="1.5" />
+  <text x="82" y="55" fill="#f8fafc" font-size="14" font-weight="700">Maya Chen</text>
+  <text x="82" y="69" fill="#10b981" font-size="10">Active now • Direct Message</text>
+  <text x="350" y="65" fill="#94a3b8" font-size="16" text-anchor="end">ℹ️</text>
+
+  <!-- Message 1 Incoming -->
+  <g transform="translate(16, 110)">
+    <circle cx="14" cy="14" r="14" fill="#1e293b" />
+    <text x="14" y="19" font-size="14" text-anchor="middle">🎨</text>
+    <rect x="36" y="0" width="230" height="54" rx="12" fill="#1e293b" stroke="rgba(255,255,255,0.06)" />
+    <text x="48" y="22" fill="#f8fafc" font-size="12">Hey Alex! Have you reviewed the</text>
+    <text x="48" y="38" fill="#f8fafc" font-size="12">new dark mode design system? 🎨</text>
+    <text x="230" y="48" fill="#64748b" font-size="9">10:30 AM</text>
+  </g>
+
+  <!-- Message 2 Outgoing -->
+  <g transform="translate(90, 180)">
+    <rect x="0" y="0" width="270" height="54" rx="12" fill="url(#bubbleGradM)" />
+    <text x="14" y="22" fill="#fff" font-size="12">Yes! The animations and responsive</text>
+    <text x="14" y="38" fill="#fff" font-size="12">touch drawer are super smooth! ⚡</text>
+    <text x="215" y="48" fill="rgba(255,255,255,0.8)" font-size="9">10:32 AM ✓✓</text>
+  </g>
+
+  <!-- Message 3 Incoming with reaction -->
+  <g transform="translate(16, 250)">
+    <circle cx="14" cy="14" r="14" fill="#1e293b" />
+    <text x="14" y="19" font-size="14" text-anchor="middle">🎨</text>
+    <rect x="36" y="0" width="240" height="42" rx="12" fill="#1e293b" stroke="rgba(255,255,255,0.06)" />
+    <text x="48" y="26" fill="#f8fafc" font-size="12">Awesome, pushing to production! 🚀</text>
+    
+    <g transform="translate(36, 48)">
+      <rect width="48" height="20" rx="10" fill="#1e293b" stroke="#6366f1" stroke-width="1.2" />
+      <text x="10" y="14" font-size="11">❤️ 2</text>
+    </g>
+  </g>
+
+  <!-- Bouncing typing indicator -->
+  <g transform="translate(24, 595)">
+    <text x="0" y="16" fill="#94a3b8" font-size="11">Maya is typing</text>
+    <circle cx="86" cy="13" r="2.5" fill="#818cf8" />
+    <circle cx="94" cy="10" r="3" fill="#818cf8" />
+    <circle cx="102" cy="13" r="2.5" fill="#818cf8" />
+  </g>
+
+  <!-- Mobile Composer -->
+  <rect x="12" y="620" width="356" height="48" rx="24" fill="#0f172a" stroke="rgba(255,255,255,0.08)" />
+  <circle cx="36" cy="644" r="12" fill="rgba(255,255,255,0.05)" />
+  <text x="36" y="649" font-size="12" text-anchor="middle">📎</text>
+  <text x="58" y="649" fill="#64748b" font-size="12">Message Maya Chen...</text>
+  <rect x="324" y="628" width="32" height="32" rx="16" fill="url(#nexaGradM)" />
+  <text x="340" y="648" font-size="12" fill="#fff" text-anchor="middle">➤</text>
+</svg>
