@@ -13,6 +13,12 @@ frontend/dist-ssr/
 .env.development.local
 .env.test.local
 .env.production.local
+backend/.env
+frontend/.env
+
+# Uploaded media files (ignore user uploads, preserve directory structure)
+backend/uploads/*
+!backend/uploads/.gitkeep
 
 # Logs
 logs/

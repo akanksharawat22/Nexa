@@ -1,0 +1,13 @@
+{
+  "name": "nexa",
+  "version": "1.0.0",
+  "description": "Nexa — Production-Grade Full-Stack Real-Time Messaging Platform",
+  "scripts": {
+    "install:all": "npm --prefix backend install && npm --prefix frontend install",
+    "build": "npm --prefix frontend install && npm --prefix frontend run build && npm --prefix backend install",
+    "start": "node backend/index.js",
+    "test": "node backend/tests/integration.test.js"
+  },
+  "author": "Akanksha Rawat",
+  "license": "MIT"
+}
