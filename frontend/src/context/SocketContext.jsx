@@ -26,7 +26,7 @@ export const SocketProvider = ({ children }) => {
   // Authentication State
   const [token, setToken] = useState(() => {
     try {
-      return localStorage.getItem('nexa_token') || localStorage.getItem('pulse_token') || null;
+      return localStorage.getItem('nexa_token') || null;
     } catch {
       return null;
     }
@@ -34,7 +34,7 @@ export const SocketProvider = ({ children }) => {
 
   const [user, setUser] = useState(() => {
     try {
-      const saved = localStorage.getItem('nexa_user') || localStorage.getItem('pulse_user');
+      const saved = localStorage.getItem('nexa_user');
       return saved ? JSON.parse(saved) : null;
     } catch {
       return null;
@@ -44,7 +44,7 @@ export const SocketProvider = ({ children }) => {
   // Theme State
   const [theme, setTheme] = useState(() => {
     try {
-      return localStorage.getItem('nexa_theme') || localStorage.getItem('pulse_theme') || 'dark';
+      return localStorage.getItem('nexa_theme') || 'dark';
     } catch {
       return 'dark';
     }
@@ -53,7 +53,7 @@ export const SocketProvider = ({ children }) => {
   // Notifications State
   const [notificationsEnabled, setNotificationsEnabled] = useState(() => {
     try {
-      return (localStorage.getItem('nexa_notifications') || localStorage.getItem('pulse_notifications')) === 'true';
+      return localStorage.getItem('nexa_notifications') === 'true';
     } catch {
       return false;
     }
@@ -427,8 +427,6 @@ export const SocketProvider = ({ children }) => {
     try {
       localStorage.removeItem('nexa_token');
       localStorage.removeItem('nexa_user');
-      localStorage.removeItem('pulse_token');
-      localStorage.removeItem('pulse_user');
     } catch (e) {
       console.warn('LocalStorage error removing user:', e);
     }

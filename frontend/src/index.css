@@ -7,7 +7,7 @@
    1. Design Tokens & CSS Variables
    -------------------------------------------------------------------------- */
 :root {
-  /* LIGHT THEME (PRIMARY DEFAULT) */
+  /* LIGHT THEME (used when the user switches from the default dark theme) */
   --bg-app: #f8fafc;
   --bg-sidebar: #ffffff;
   --bg-chat: #f8fafc;
@@ -66,7 +66,7 @@
   --transition-normal: 0.2s ease;
 }
 
-/* DARK THEME (OPTIONAL USER TOGGLE) */
+/* DARK THEME (DEFAULT) */
 [data-theme="dark"] {
   --bg-app: #0b0f19;
   --bg-sidebar: #0f172a;
@@ -2416,7 +2416,7 @@ button {
   animation: slideUp 0.15s ease;
 }
 
-.reconnect-pulse-dot {
+.reconnect-status-dot {
   width: 6px;
   height: 6px;
   border-radius: 50%;

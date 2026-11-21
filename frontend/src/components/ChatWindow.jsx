@@ -265,7 +265,7 @@ const ChatWindow = () => {
       {/* Reconnection Warning Banner */}
       {!isConnected && (
         <div className="network-reconnect-banner">
-          <span className="reconnect-pulse-dot" />
+          <span className="reconnect-status-dot" />
           <span>Syncing with real-time server... Incoming messages will update automatically.</span>
         </div>
       )}
@@ -311,8 +311,9 @@ const ChatWindow = () => {
               {inChatSearchQuery
                 ? 'Try searching with a different keyword or check spelling.'
                 : isDirect
-                ? `This is the beginning of your private end-to-end synchronized chat with ${activeChat.name}.`
+                ? `This is the beginning of your private conversation with ${activeChat.name}.`
                 : `This is the start of the #${activeChat.name} channel conversation. Messages are broadcast in real-time.`}
+                
             </p>
           </div>
         ) : (
