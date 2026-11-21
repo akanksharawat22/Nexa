@@ -6,10 +6,10 @@ import ChatWindow from './components/ChatWindow';
 import ConversationDetails from './components/ConversationDetails';
 
 const MainLayout = () => {
-  const { user, registerUser, showDetails, mobileView } = useSocket();
+  const { user, showDetails, mobileView } = useSocket();
 
   if (!user) {
-    return <AuthModal onJoin={registerUser} />;
+    return <AuthModal />;
   }
 
   return (
