@@ -2,7 +2,7 @@ const { io } = require('../frontend/node_modules/socket.io-client');
 const http = require('http');
 
 async function runVerification() {
-  console.log('🚀 Starting PulseChat Real-Time Verification Test...');
+  console.log('🚀 Starting Nexa Real-Time Verification Test...');
   const socketUrl = 'http://localhost:5000';
 
   const clientA = io(socketUrl, { transports: ['websocket'] });
@@ -23,29 +23,29 @@ async function runVerification() {
   let presencePromise = new Promise((resolve) => {
     clientB.on('presence:update', (users) => {
       const usernames = users.map(u => u.username);
-      if (usernames.includes('Alice') && usernames.includes('Bob')) {
+      if (usernames.includes('Alex') && usernames.includes('Maya')) {
         resolve(users);
       }
     });
   });
 
-  clientA.emit('user:register', { username: 'Alice', avatar: 'avatar-1' });
-  clientB.emit('user:register', { username: 'Bob', avatar: 'avatar-2' });
+  clientA.emit('user:register', { username: 'Alex', avatar: 'avatar-1' });
+  clientB.emit('user:register', { username: 'Maya', avatar: 'avatar-3' });
 
   const presenceList = await presencePromise;
   console.log('✅ Presence Update Verified: Online users =', presenceList.map(u => u.username).join(', '));
 
   // Test 2: Room Joining
-  let aliceJoinedRoom = false;
-  let bobJoinedRoom = false;
+  let alexJoinedRoom = false;
+  let mayaJoinedRoom = false;
 
-  clientA.emit('room:join', { room: 'tech-talk', username: 'Alice' });
-  clientB.emit('room:join', { room: 'tech-talk', username: 'Bob' });
+  clientA.emit('room:join', { room: 'tech-talk', username: 'Alex' });
+  clientB.emit('room:join', { room: 'tech-talk', username: 'Maya' });
 
   // Test 3: Bi-Directional Messaging in 'tech-talk'
   let messagePromise = new Promise((resolve) => {
     clientB.on('message:receive', (msg) => {
-      if (msg.content === 'Hello Bob from Alice!') {
+      if (msg.content === 'Hello Maya from Alex!') {
         resolve(msg);
       }
     });
@@ -53,8 +53,8 @@ async function runVerification() {
 
   clientA.emit('message:send', {
     room: 'tech-talk',
-    content: 'Hello Bob from Alice!',
-    sender: { username: 'Alice', avatar: 'avatar-1' }
+    content: 'Hello Maya from Alex!',
+    sender: { username: 'Alex', avatar: 'avatar-1' }
   });
 
   const receivedMsg = await messagePromise;
@@ -68,13 +68,13 @@ async function runVerification() {
   // Test 4: Typing Indicator
   let typingPromise = new Promise((resolve) => {
     clientB.on('typing:user_started', (data) => {
-      if (data.username === 'Alice' && data.room === 'tech-talk') {
+      if (data.username === 'Alex' && data.room === 'tech-talk') {
         resolve(data);
       }
     });
   });
 
-  clientA.emit('typing:start', { room: 'tech-talk', username: 'Alice' });
+  clientA.emit('typing:start', { room: 'tech-talk', username: 'Alex' });
   const typingData = await typingPromise;
   console.log('✅ Typing Indicator Verified:', `${typingData.username} started typing in #${typingData.room}`);
 
